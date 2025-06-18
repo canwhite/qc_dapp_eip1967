@@ -5,6 +5,8 @@
   "license": "MIT",
   "dependencies": {
     "@openzeppelin/contracts": "^5.3.0",
+    "@openzeppelin/contracts-upgradeable": "^5.3.0",
+    "@openzeppelin/hardhat-upgrades": "^3.9.0",
     "dotenv": "^16.5.0",
     "hardhat": "^2.24.1"
   },
@@ -14,7 +16,7 @@
     "test": "yarn hardhat test",
     "compile": "yarn hardhat compile",
     "ignition_deploy": "yarn hardhat ignition deploy ./ignition/modules/deploy_classtoken.ts --network localhost",
-    "normal_deploy": "yarn hardhat run ./scripts/deploy_classtoken.ts --network localhost"
+    "deploy_cls": "yarn hardhat run ./scripts/deploy_classtoken.ts --network localhost"
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-chai-matchers": "^2.0.0",
