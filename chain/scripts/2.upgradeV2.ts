@@ -14,6 +14,11 @@ async function main() {
   const box2ProxyAddress = await boxV2.getAddress();
   console.log(box2ProxyAddress, " BoxV2 address(should be the same)");
 
+  // if you try to get implementation address ，you  found  that the value is 0，
+  // cause the data is stored on proxy contract
+  //   addressimp = '0x5fc8d32690cc91d4c39d9d3abcbd16989f875707'
+  // boximp = await ethers.getContractAt("BoxV2", addressimp)
+
   console.log(
     await upgrades.erc1967.getImplementationAddress(box2ProxyAddress),
     " getImplementationAddress"
