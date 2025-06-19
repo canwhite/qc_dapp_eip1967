@@ -5,7 +5,7 @@ import { Contract, BigNumber } from "ethers";
 describe("Box V2", function () {
   let boxV2: Contract;
 
-  before(async function () {
+  beforeEach(async function () {
     const BoxV2 = await ethers.getContractFactory("BoxV2");
     boxV2 = await BoxV2.deploy();
   });

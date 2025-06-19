@@ -5,7 +5,7 @@ import { Contract } from "ethers";
 describe("Box (proxy)", function () {
   let box: Contract;
 
-  before(async function () {
+  beforeEach(async function () {
     const Box = await ethers.getContractFactory("Box");
     // 初始化 box 变量，注意去掉 const
     box = await upgrades.deployProxy(Box, [42], { initializer: "initialize" });

@@ -5,8 +5,8 @@ import { ethers } from "hardhat"; // 确保从 hardhat 导入 ethers
 // normal deploy
 describe("Box", () => {
   let box: ethers.Contract;
-
-  before(async () => {
+  //we also have before, after , afterEach
+  beforeEach(async () => {
     const Box = await ethers.getContractFactory("Box");
     box = await Box.deploy();
     console.log("Box contract deployed to:", box.target);
