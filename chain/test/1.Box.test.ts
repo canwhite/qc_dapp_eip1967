@@ -2,6 +2,7 @@ import { BigNumber } from "module";
 import { expect } from "chai";
 import { ethers } from "hardhat"; // 确保从 hardhat 导入 ethers
 
+// normal deploy
 describe("Box", () => {
   let box: ethers.Contract;
 
